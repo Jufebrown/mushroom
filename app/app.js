@@ -15,8 +15,8 @@ app.config(($routeProvider, $locationProvider) => {
 app.controller('MainCtrl', function($scope, mainFactory) {
   mainFactory.getList()
   .then((val) => {
-    console.log('val from listctrl', val)
-    $scope.list = val.list
+    console.log('val from mainctrl', val)
+    $scope.mushrooms = val.mushrooms
   })
 })
 
