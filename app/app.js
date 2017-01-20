@@ -18,6 +18,10 @@ app.controller('MainCtrl', function($scope, mainFactory) {
     console.log('val from mainctrl', val)
     $scope.mushrooms = val.mushrooms
   })
+  $scope.isActive = false;
+  $scope.activeButton = function() {
+    $scope.isActive = !$scope.isActive;
+  }
 })
 
 
