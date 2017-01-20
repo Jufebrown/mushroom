@@ -11,5 +11,5 @@
 </form>
 
 <ul>
-  <li ng-repeat="listItem in list | filter: mushFilter"><a href="#/list/{{listItem.id}}">{{listItem.item}}</a></li>
+  <li ng-repeat="mushroom in mushrooms | filter: mushFilter"><span ng-repeat="(mushName, value) in mushroom">{{mushName}}</span></li>
 </ul>
