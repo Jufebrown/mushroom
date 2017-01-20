@@ -26,7 +26,7 @@ app.factory('mainFactory', function($http){
     getList : () => {
       return $http.get('mushroom.json')
       .then((value) => {
-        console.log(value)
+        console.log("value from mainFactory", value)
         return value.data
       })
     }
