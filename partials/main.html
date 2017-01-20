@@ -4,12 +4,12 @@
   </div>
   <div class="form-group">
     <div class="btn-group" role="group" aria-label="...">
-      <button type="button" class="btn btn-default" ng-click>Poisonous</button>
-      <button type="button" class="btn btn-default" ng-click>Non-Poisonous</button>
+      <button type="button" class="btn btn-default poisonButton" ng-click="myFilter=false">Poisonous</button>
+      <button type="button" class="btn btn-default nonPoisonButton" ng-click="myFilter=true">Non-Poisonous</button>
     </div>
   </div>
 </form>
 
 <ul>
-  <li ng-repeat="mushroom in mushrooms | filter: mushFilter"><span ng-repeat="(mushName, value) in mushroom">{{mushName}}</span></li>
+  <li ng-repeat="mushroom in mushrooms | filter: mushFilter | filter: myFilter"><span ng-repeat="(mushName, value) in mushroom"><strong>{{mushName}}</strong><p>{{value.description}}</p></span></li>
 </ul>
